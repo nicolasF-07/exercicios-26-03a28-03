@@ -1,0 +1,100 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Container principal */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Título */
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Lista de compras */
+#lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+#lista li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#lista li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Campo de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Botões alinhados lado a lado */
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Botão adicionar */
+button:nth-child(1) {
+    background: #28a745;
+    color: white;
+}
+
+button:nth-child(1):hover {
+    background: #218838;
+}
+
+/* Botão remover */
+button:nth-child(2) {
+    background: #dc3545;
+    color: white;
+}
+
+button:nth-child(2):hover {
+    background: #c82333;
+}
+    

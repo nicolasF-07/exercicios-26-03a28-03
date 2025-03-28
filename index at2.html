@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul id="lista">
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Batata</li>
+                <li>Carnes</li>
+            </ul>
+        </nav>
+    </div>
+
+    <input type="text" id="novoItem" placeholder="Digite um item">
+    <button onclick="adicionar()">Adicionar item</button>
+    <button onclick="remover()">Remover último item</button>
+
+    <script>
+        function adicionar() {
+            var novoItemTexto = document.getElementById("novoItem").value;
+            if (novoItemTexto.trim() === "") {
+                alert("Digite um item antes de adicionar.");
+                return;
+            }
+
+            var lista = document.getElementById("lista");
+            var novoItem = document.createElement("li");
+            novoItem.textContent = novoItemTexto;
+            lista.appendChild(novoItem);
+
+            document.getElementById("novoItem").value = ""; // Limpa o campo de entrada
+        }
+
+        function remover() {
+            var lista = document.getElementById("lista");
+            if (lista.children.length > 0) {
+                lista.removeChild(lista.lastElementChild);
+            } else {
+                alert("Não há mais itens para remover.");
+            }
+        }
+    </script>
+</body>
+</html>

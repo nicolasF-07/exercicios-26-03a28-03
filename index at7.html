@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="meuFormulario">
+            <label for="campoTexto">Digite algo:</label>
+            <input type="text" id="campoTexto" name="campoTexto">
+            <button type="submit">Enviar</button>
+            <p id="mensagemErro" class="error"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+            var campoTexto = document.getElementById("campoTexto").value;
+            var mensagemErro = document.getElementById("mensagemErro");
+            
+            if (campoTexto.trim() === "") {
+                event.preventDefault();
+                mensagemErro.textContent = "O campo não pode estar vazio.";
+            } else {
+                mensagemErro.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade 4</title>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="centro">
+            <h1>Contador de Clique</h1>
+            <p id="contador">0</p>
+            <button onclick="incrementar()"">CONTADOR DE CLIQUE</button>
+
+            <button onclick="resetar()">RESETAR CONTADOR</button>
+        </div>
+
+        <script>
+            let contador = 0;
+
+            function incrementar() {    
+                contador++;
+                document.getElementById("contador").textContent = contador;
+            }
+
+            function resetar(){
+                contador = 0;
+                document.getElementById("contador").textContent = contador;
+            }
+        </script>
+    </div>
+</body>
+</html>

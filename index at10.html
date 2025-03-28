@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>atividade 10</title>
+</head>
+<body>
+    <div class="container">
+        <button id="btnCarregar">carregar</button>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p id="porcentagem">0%</p>
+    </div>
+
+    <script>
+        document.getElementById("btnCarregar").addEventListener("click",function(){
+            let progresso = 0;
+            const barra = document.getElementById("progressBar");
+            const porcentagemTexto = document.getElementById("porcentagem");
+
+            const intervalo = setInterval(()=> {
+                if(progresso >= 100){
+                    clearInterval(intervalo)
+                }else{
+                    progresso += 1;
+                    barra.style.width = progresso + "%";
+                    porcentagemTexto.textContent = progresso + "%";
+                }
+            },50);  
+        
+        });
+    </script>
+</body>
+</html>

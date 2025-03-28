@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="btnMostrarHora">Mostrar Data e Hora</button>
+        <p id="dataHora"></p>
+    </div>
+
+    <script>
+        document.getElementById("btnMostrarHora").addEventListener("click", function () {
+            const dataAtual = new Date();
+            const formatoDataHora = dataAtual.toLocaleString("pt-BR", {
+                dateStyle: "full",
+                timeStyle: "medium"
+            });
+
+            document.getElementById("dataHora").textContent = formatoDataHora;
+        });
+
+    </script>
+</body>
+
+</html>
