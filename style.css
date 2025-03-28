@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+.corpo{
+    background-color: darkcyan;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#txt{
+    padding: 10px 20px;
+    font-size: 70px;
+    background-color: brown;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff5733;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #c44224;
+}
+
+script{
+    color: white;
+    font-size: 30px;
+}
